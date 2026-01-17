@@ -1,0 +1,136 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+/* Header and navigation */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #007bff;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+/* Hamburger menu for mobile */
+.menu-toggle {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Page content */
+.page {
+  padding: 4rem 2rem;
+  max-width: 960px;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.page:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.page h1 {
+  margin-bottom: 1.5rem;
+  color: #007bff;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.page p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #0f172a;
+  color: #e5e7eb;
+  font-size: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar.open ul {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .page {
+    padding: 2rem 1rem;
+    margin: 1rem;
+  }
+
+  .page h1 {
+    font-size: 2rem;
+  }
+}
